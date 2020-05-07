@@ -35,7 +35,7 @@ export class HomePage {
     }
   }
 
-  calcula(tipo:string) {
+  calcula(tipo: string) {
     if (this.operacao == "") {
       this.memoria = this.valor;
     }
@@ -51,12 +51,13 @@ export class HomePage {
     else if (this.operacao == "/") {
       this.memoria = this.memoria / this.valor;     
     }
-    else if(tipo == "=") {
+    if(tipo == "=") {
       this.valor = this.memoria;
       this.memoria = 0;
       this.operacao = "";
-    }
+    }else{
     this.operacao = tipo;
-    this.valor = 0;    
+    this.valor = 0;
+    }
   }
 }
