@@ -1,0 +1,88 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Calculadora
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Calculadora</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+<ion-content [fullscreen]="true">
+  <div>
+    <p style="text-align: right; margin-right: 20px;">{{memoria}} {{operacao}}</p>
+    <ion-input type="number" readonly value="0" 
+    style="text-align:right; font-size:250%;" [(ngModel)]="valor">
+  </div>
+</ion-input>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-button expand="full" (click)="clickBotao('7')">7</ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button expand="full" (click)="clickBotao('8')">8</ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button expand="full" (click)="clickBotao('9')">9</ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button expand="full" (click)="calcula('/')">/</ion-button>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-button expand="full" (click)="clickBotao('4')">4</ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button expand="full" (click)="clickBotao('5')">5</ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button expand="full" (click)="clickBotao('6')">6</ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button expand="full" (click)="calcula('*')">*</ion-button>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-button expand="full" (click)="clickBotao('1')">1</ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button expand="full" (click)="clickBotao('2')">2</ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button expand="full" (click)="clickBotao('3')">3</ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button expand="full" (click)="calcula('-')">-</ion-button>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-button expand="full" (click)="clickOutros('+/-')">+/-</ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button expand="full" (click)="clickBotao('0')">0</ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button expand="full" (click)="clickOutros('.')">.</ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button expand="full" (click)="calcula('+')">+</ion-button>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="9">
+        <ion-button expand="full" (click)="calcula('=')">=</ion-button>
+      </ion-col>
+      <ion-col size="3">
+        <ion-button expand="full" (click)="clickOutros('C')">C</ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
